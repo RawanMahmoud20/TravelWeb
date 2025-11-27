@@ -1,0 +1,47 @@
+.navbar{
+    background-color: #19283f;
+    padding:15px 20px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navLinks li a{
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+/* .fa-solid{
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    margin-right: 40px;
+}
+.navLinks li a.active,
+.navLinks li a:hover{
+  text-decoration: none;
+  color: #33d1cc;
+} */
+
+
+/* الرابط النشط أو عند hover */
+.navLinks li a.active,
+.navLinks li a:hover {
+  color: #33d1cc;
+}
+
+/* أيقونة المستخدم */
+.userIcon i {
+  color: white;
+  font-size: 17px;
+}

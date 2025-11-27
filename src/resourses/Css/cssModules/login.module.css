@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "cairo",sans-serif;
+}
+.body{
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login-container{
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 16px;
+    width: 350px;
+    box-shadow: 0 8px 20px rgba(0,0 0, 0.1);
+    text-align: center;
+}
+.logo h1{
+    color: #1a73e8;
+    margin-bottom: 20px;
+}
+.welcome-text{
+    margin-bottom: 25px;
+    font-size: 20px;
+    color: #212121;
+}
+.login-form input{
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+.forgot-password{
+    display: block;
+    text-align: right;
+    margin: 5px 0 20px;
+    font-size: 14px;
+    color: #1a73e8;
+    text-decoration: none;
+}
+.login-form button{
+    width: 100%;
+    padding: 12px;
+    background-color: #1a73e8;
+    color:#fff ;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.divider{
+    margin: 10px 0 15px;
+    font-size: 14px;
+    color: #666;
+}
+.social-login button{ 
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    margin: 5px 1px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fff;
+}
+.google{
+    background-color: #4267b2;
+}
+.facebook{
+    background-color: #4267b2;
+}
+.signup-text{
+    font-size: 14px;
+    color: #666;
+    margin-top: 15px;
+}
+.signup-text a{
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: bold;
+}

@@ -1,0 +1,316 @@
+:root{
+
+    --dark-color:#19283f;
+    --green-color:#33d1cc;
+    --red-color:#ff3150;
+    --yellow-color:#ffc400;
+    --section-color:#eff7fa;
+}
+body{
+    font-family: 'Roboto',sans-serif;
+}
+
+ /* navbar Section */
+
+.travelNavbar{
+    background-color: #0B1A31;
+    padding:15px 20px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    height: 70px;
+}
+.travelNavbar .Navlogo {
+  font-size: 30px;
+  font-weight: bold;
+}
+.navLink{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.travelNavbarNav li a{
+    color: white;
+
+}
+.travelNavbarNav li {
+  display: flex;
+  align-items: center;
+}
+
+.travelNavbarNav li a,
+.travelNavbarNav li i {
+  display: flex;
+  align-items: center;
+}
+
+.faSolid{
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    margin-right: 40px;
+}
+.travelNavbarNav li a:hover{
+  text-decoration: none;
+  color: #33d1cc;
+}
+.active {
+  color: #33d1cc !important;
+  text-decoration: none;
+}
+
+.travelNavbar .travelNavbarToggler{
+   color: white;
+   font-size: 25px;
+   border-color: white;
+}
+ 
+
+/* إزالة أي سكرول أفقي */
+body,
+html {
+  overflow-x: hidden !important;
+}
+
+img {
+  max-width: 100%;
+  height: 260px;
+}
+
+.box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  height: 660px;
+}
+/* تأثير hover */
+.box:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* تأثير Hover */
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* تأثير  للصورة */
+.card img {
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* تقليل حجم الصورة في قسم Pyramids */
+.pyramidsImg {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* لمركزة الصورة عموديًا */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  margin-bottom: 55px;
+}
+
+
+.logo{
+    color: white;
+    font-size: 50px;
+    margin-bottom: 30px;
+    height: 90px;
+}
+.mainTitle::after{
+  content: "";
+  background-color: var(--green-color);
+  width: 120px;
+  height: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20px;
+  position: absolute;
+}
+/* .btnn{
+  background-color: #1d3354;
+  color: white;
+  padding: 8px 10px ;
+  text-decoration: none;
+} */
+.btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  background: #1c3352;
+  color: #fff;
+  border: 0;
+}
+.btn:hover {
+  background-color: #33d1cc;
+  color: #fff;
+}
+
+
+.team .row .box{
+  height: 700px;
+}
+
+.landing{
+  background:#19283f;
+  height: 660px;
+}
+.row .box .imgFluid{
+  height: 300px;
+}
+.features .icon-holder {
+  height: 200px;
+}
+.features .icon-holder svg{
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .icon-holder .number{
+  font-size: 12rem;
+  color: var(--section-color);
+}
+.features .icon-holder .icon{
+  color: var(--green-color);
+}
+.features .feat h4{
+  color: var(--yellow-color);
+}
+.ourWork{
+  background-color: var(--section-color);
+}
+.ourWork ul .active{
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+
+
+.ourWork ul li{
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* .ourWork ul li:not(.active):hover{ */
+  /* color: var(--red-color); */
+/* } */
+.btn{
+  margin-top: 8px;
+}
+.ourWork .box{
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+/* .ourWork .imgFluid{ */
+  /* height: 180px; */
+ 
+/* } */
+.ourWork .box::before{
+  content: attr(data-work);
+  position: absolute;
+  background-color: rgba(67, 77, 76, 0.2);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  transition: 0.3s;
+  font-size: 1.5rem;
+  transform: translateX(calc(-100% - 5px));
+}
+.ourWork .box:hover::before{
+  transform: translateX(0)
+}
+.stuffe .desciption{
+  max-width:500px;
+}
+.team{
+  background-color: var(--section-color);
+}
+.team h2{
+  color: var(--yellow-color);
+}
+.team .box h4{
+  background-color: var(--green-color);
+}
+.project{
+  background-color: var(--dark-color);
+}
+.footer{
+  background-color: var(--dark-color);
+}
+.footer img{
+  height: 55px;
+}
+.footer .copyright > span{
+  color: var(--green-color);
+}
+.footer .copyright div span{
+  color: var(--yellow-color);
+}
+
+.footer .contact ul svg{
+  width: 20px;
+  height: 20px;
+}
+.footer .facebook{
+  background-color: #1877f2;
+}
+.footer .twitter{
+  background-color: #1da1f2;
+}
+.footer .linkedin{
+  background-color: #0077b5;
+}
+.footer .youtube{
+  background-color: #ff0000;
+}
+@media (max-width:768px){
+  .ourWork .two{
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .navbar .logo {
+    display: none;
+  }
+}
+.techs img{
+  height: 55px;
+}
+.logoo{
+  height: 80px;
+}
+.logo{
+  height: 120px;
+}
+.row .card{
+  height: 550px;
+}
+.landing .img{
+  max-width: 100%;
+  height: auto;
+}

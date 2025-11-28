@@ -19,17 +19,16 @@ body {
   text-decoration: none;
   font-size: 17px;
 }
-
-.nav-links li a.active,
-.nav-links li a:hover {
-  text-decoration: none;
-  color: #33d1cc;
-}
 .fa-solid{
     color: white;
     text-decoration: none;
     font-size: 17px;
     margin-right: 40px;
+}
+.nav-links li a.active,
+.nav-links li a:hover {
+  text-decoration: none;
+  color: #33d1cc;
 }
 .header-flights {
   background-color: #19283f;

@@ -4,7 +4,7 @@ import TravelGoStyle from "../../resourses/Css/cssModules/TravelGo.module.css";
 
 const NavBar = () => {
   const location = useLocation();
-  const isHome = location.pathname === "/index"; // تحقق إذا كانت الصفحة الرئيسية
+  const isHome = location.pathname === "/"; // تحقق إذا كانت الصفحة الرئيسية
 
   return (
     <nav className={`navbar navbar-expand-lg sticky-top ${TravelGoStyle.travelNavbar}`}>
@@ -31,7 +31,7 @@ const NavBar = () => {
                   `nav-link p-2 p-lg-3 ${isActive ? TravelGoStyle.active : ""} ${TravelGoStyle.travelNavLink}`
                 }
                 aria-current="page"
-                to="/index"
+                to="/"
               >
                 Home
               </NavLink>
@@ -78,14 +78,13 @@ const NavBar = () => {
             </li>
             <li>
               {isHome ? (
-                <button
+                <NavLink
                   id="login-btn"
-                  className={`btn-primary rounded-pill main-btn ${TravelGoStyle.btn}`}
-                  // يمكن استخدام NavLink إذا أردت التنقل عند الضغط
-                  onClick={() => window.location.href = "/login"}
+                  className={`btn-primary rounded-pill main-btn ${TravelGoStyle.LogInbtn}`}
+                  to="/login"
                 >
                   Login
-                </button>
+                </NavLink>
               ) : (
                 <NavLink id="profile-btn" to="/profile" className={`${TravelGoStyle.userIcon}`}>                  
                 <i className={`fa-solid fa-user`}></i> {/* أيقونة البروفايل */}

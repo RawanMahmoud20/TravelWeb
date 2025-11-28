@@ -1,93 +1,74 @@
 body {
+  margin: 0;
   display: block;
-  margin: 0;
 }
-.navbar {
-  margin: 0;
-  background-color: #19283f;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
-}
-.navbar .logo {
-  font-size: 22px;
-  font-weight: bold;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-}
-.fa-solid{
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-    margin-right: 40px;
-}
-.nav-links li a.active,
-.nav-links li a:hover {
-  text-decoration: none;
-  color: #33d1cc;
-}
-.header-hotels {
-  background: url("https//i.ibb.co/2Zt8RKs/flight-bg.jpg;") cover no-repeat;
+
+.headerHotels {
+  background-color: #0B1A31;
   text-align: center;
   padding: 80px 20px;
   color: #fff;
-  background-color: #19283f;
 }
-.header-hotels h2 {
+
+.headerHotels h1 {
   font-size: 40px;
 }
-.header-hotels p {
+
+.headerHotels p {
   font-size: 18px;
 }
-.hotel-search h2 {
-  margin-bottom: -36px;
+
+.hotelSearch h2 {
+  /* margin-bottom: -36px;
   padding: 8px 18px;
   background: white;
   color: #19283f;
-  cursor: pointer;
+  cursor: pointer; */
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center ;
+  gap: 15px;
+  color: #19283f;
+  padding: 20px 18px;
+  margin-bottom: 25px;
+
 }
-.search {
-  margin-left: 250px;
-}
-.hotel-form {
+
+.hotelForm {
   display: flex;
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
 }
-.hotel-form input {
+
+.hotelForm input {
   padding: 10px;
   width: 220px;
   font-size: 15px;
 }
-.hotel-form button {
+
+.hotelForm button {
   padding: 10px 20px;
   background: #0a3d62;
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 6px;
 }
-.hotel-form button:hover {
+
+.hotelForm button:hover {
   background: #33d1cc;
 }
-.guide-list {
+
+.guideList {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 30px;
 }
-.guide-card {
+
+.guideCard {
   background: white;
   width: 250px;
   border-radius: 12px;
@@ -96,35 +77,42 @@ body {
   box-shadow: 0 30px 10px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 }
-.guide-card img {
+
+.guideCard img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 10px;
 }
-.guide-card h3 {
+
+.guideCard h3 {
   margin: 10px 0 5px;
   color: #0a3d62;
 }
-.guide-card p {
+
+.guideCard p {
   font-size: 14px;
   margin-bottom: 10px;
 }
-.guide-card button {
+
+.guideCard button {
   padding: 10px 20px;
   background: #0a3d62;
   color: white;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
+  border-radius: 6px;
 }
-.guide-card:hover {
+
+.guideCard:hover {
   transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0, 0, o, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
-.guide-card button:hover {
+
+.guideCard button:hover {
   background: #075082;
 }
+
 @media (max-width: 991px) {
   .navbar .logo {
     display: none;

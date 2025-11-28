@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import TravelGoStyle from "../../../resourses/Css/cssModules/TravelGo.module.css";
-import HeaderLogo from "../../../resourses/image/Header.jpg";
+import HeaderLogo from "../../../resourses/image/HomeHeader.jpg";
 import LogoTravelGo from "../../../resourses/image/LogoTravelGo.jpg";
 import Italy from "../../../resourses/image/Italy.jpg";
 import LIVADIA_PALACE from "../../../resourses/image/LIVADIA_PALACE.jpg";
@@ -10,6 +10,7 @@ import PERU from "../../../resourses/image/PERU.jpg";
 import CHINA from "../../../resourses/image/CHINA.jpg";
 import ICELAND from "../../../resourses/image/ICELAND.jpg";
 import TAJ_MAHAL from "../../../resourses/image/TAJ_MAHAL.jpg";
+import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <Fragment>
@@ -104,12 +105,12 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <button
+          <NavLink
             className={`rounded-pill main-btn text-uppercase ${TravelGoStyle.btn}`}
-            href="flights.html"
+            to="/flights"
           >
             travel now
-          </button>
+          </NavLink>
         </div>
       </div>
     </Fragment>

@@ -10,6 +10,7 @@ import icons_3 from "../../../resourses/image/icons_3.webp";
 import icons_4 from "../../../resourses/image/icons_4.webp";
 import icons_5 from "../../../resourses/image/icons_5.webp";
 import icons_6 from "../../../resourses/image/icons_6.webp";
+import { NavLink } from "react-router-dom";
 
 const HomeCards = () => {
   return (
@@ -145,11 +146,12 @@ const HomeCards = () => {
           Book your stay at the most beautiful hotels in the world
         </p>
         <div className="d-flex justify-content-center mt-5 mb-5">
-          <button
-            className={`${TravelGoStyle.btn}  rounded-pill main-btn text-uppercase" href="hotels.html`}
+          <NavLink
+            className={`${TravelGoStyle.btn}  rounded-pill main-btn text-uppercase" `}
+            to="/hotels"
           >
             Book now
-          </button>
+          </NavLink>
         </div>
       </div>
     </Fragment>

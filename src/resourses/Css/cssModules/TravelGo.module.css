@@ -1,5 +1,4 @@
 :root{
-
     --dark-color:#19283f;
     --green-color:#33d1cc;
     --red-color:#ff3150;
@@ -146,14 +145,20 @@ img {
   bottom: -20px;
   position: absolute;
 }
-/* .btnn{
-  background-color: #1d3354;
-  color: white;
-  padding: 8px 10px ;
-  text-decoration: none;
-} */
+
 .btn {
   display: inline-block;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  background: #1c3352;
+  color: #fff;
+  border: 0;
+}
+.LogInbtn{
+    display: inline-block;
   padding: 8px 14px;
   border-radius: 10px;
   font-weight: 600;
@@ -167,7 +172,9 @@ img {
   background-color: #33d1cc;
   color: #fff;
 }
-
+.LogInbtn:hover {
+   background-color: #0d095a;
+}
 
 .team .row .box{
   height: 700px;
@@ -271,10 +278,12 @@ img {
 .footer .copyright div span{
   color: var(--yellow-color);
 }
-
-.footer .contact ul svg{
-  width: 20px;
-  height: 20px;
+.footer .contact ul i{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
 }
 .footer .facebook{
   background-color: #1877f2;

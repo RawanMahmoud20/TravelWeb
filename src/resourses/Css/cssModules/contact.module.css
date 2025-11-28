@@ -1,74 +1,51 @@
-body {
-  margin: 0;
-}
-.navbar {
-  background-color: #19283f;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-}
-.fa-solid{
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-    margin-right: 40px;
-}
-.nav-links li a.active,
-.nav-links li a:hover {
-  text-decoration: none;
-  color: #33d1cc;
-}
-.header-flights {
-  background-color: #19283f;
+.headerFlights {
+  background-color: #0B1A31;
   text-align: center;
   padding: 80px 20px;
   color: white;
 }
-.header-flights h1 {
+
+.headerFlights h1 {
   font-size: 42px;
 }
-.contact-section {
+
+.contactSection {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
   padding: 40px;
 }
-.contact-info {
-  background: #19283f;
+
+.contactInfo {
+  background: #0B1A31;
   color: white;
   padding: 25px;
   border-radius: 12px;
   width: 280px;
 }
-.contact-info h2 {
+
+.contactInfo h2 {
   margin-bottom: 15px;
 }
-.contact-form {
+
+.contactForm {
   background: #ffffff;
   width: 350px;
   padding: 25px;
-  border-radius: 12ppx;
+  border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  text-align: left;
 }
-.contact-form h2 {
+
+.contactForm h2 {
   margin-bottom: 15px;
   color: #19283f;
 }
-.contact-form input,
-.contact-form textarea {
+
+.contactForm input,
+.contactForm textarea {
   width: 92%;
   padding: 12px;
   margin-bottom: 12px;
@@ -76,7 +53,8 @@ body {
   border-radius: 8px;
   font-size: 15px;
 }
-.contact-form button {
+
+.contactForm button {
   width: 100%;
   padding: 12px;
   background: #19283f;
@@ -86,24 +64,14 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
-.contact-form button:hover {
-  background: #19283f;
+
+.contactForm button:hover {
+  background: #162033;
 }
-@media (max-width: 991px) {
-  .navbar .logo {
-    display: none;
+
+@media (max-width: 600px) {
+  .contactForm {
+    width: 90%;
+    padding: 15px;
   }
-}
-.contact-form {
-  background: white;
-  width: 250px;
-  border-radius: 12px;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 30px 10px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-}
-.contact-form:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0, 0, o, 0.15);
 }

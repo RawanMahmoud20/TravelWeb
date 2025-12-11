@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../../resourses/Css/cssModules/flights.module.css";
+import styles from "../../../resourses/Css/cssModules/cities.module.css";
 
 const CityCard = ({ img, name }) => {
   return (
@@ -7,7 +7,7 @@ const CityCard = ({ img, name }) => {
       <img src={img} className={styles.cardImgTop} alt={name} />
 
       <div className={styles.cardBody}>
-        <h3 className={styles.cityName}>{name}</h3>
+        <h5 className={styles.cityName}>{name}</h5>
 
         <button
           onClick={() => (window.location.href = '/TravelForm')}

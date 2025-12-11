@@ -41,21 +41,12 @@ const NavBar = () => {
                 className={({ isActive }) =>
                   `nav-link p-2 p-lg-3 ${isActive ? TravelGoStyle.active : ""} ${TravelGoStyle.travelNavLink}`
                 }
-                to="/flights"
+                to="/cities"
               >
-                Flights
+                Cities
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink
-                className={({ isActive }) =>
-                  `nav-link p-2 p-lg-3 ${isActive ? TravelGoStyle.active : ""} ${TravelGoStyle.travelNavLink}`
-                }
-                to="/hotels"
-              >
-                Hotels
-              </NavLink>
-            </li>
+
             <li className="nav-item">
               <NavLink
                 className={({ isActive }) =>

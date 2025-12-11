@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../../resourses/Css/cssModules/flights.module.css";
+import styles from "../../../resourses/Css/cssModules/cities.module.css";
 
 const CityForm = () => {
   return (

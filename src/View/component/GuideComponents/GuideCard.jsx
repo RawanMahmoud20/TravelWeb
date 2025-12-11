@@ -13,4 +13,5 @@ const GuideCard = ({ name, languages, image }) => {
   );
 };
 
+
 export default GuideCard;

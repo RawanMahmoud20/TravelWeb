@@ -150,6 +150,11 @@ body {
   text-align: center;
   margin-bottom: 20px;
 }
+.bookBtn {
+  font-size: 14px;     
+  padding: 6px 12px;    
+  border-radius: 6px;   
+}
 
 /* Search section */
 .searchSection {

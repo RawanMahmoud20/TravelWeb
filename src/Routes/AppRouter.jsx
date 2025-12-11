@@ -9,7 +9,7 @@ import Home from "../View/page/Home";
 import Login from "../View/page/Login";
 import Signup from '../View/page/Signup';
 import ResetPassword from '../View/page/ResetPassword';
-import TravelForm from "../View/component/FlightComponents/TravelForm";
+import TravelForm from "../View/component/CityComponents/TravelForm";
 import Cities from "../View/page/City";
 
 const AppRouter  = () => {

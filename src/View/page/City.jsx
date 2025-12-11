@@ -1,12 +1,12 @@
 import React from "react";
 import NavBar from "../component/NavBar";
-import CityForm from "../component/FlightComponents/CityForm";
-import CityCard from "../component/FlightComponents/CityCard";
+import CityForm from "../component/CityComponents/CityForm";
+import CityCard from "../component/CityComponents/CityCard";
 import ToParis from "../../resourses/image/ToParis.webp";
 import ToIstanbul from "../../resourses/image/ToIstanbul.webp";
 import ToDubai from "../../resourses/image/ToDubai.jpg";
 
-import  styles from   "../../resourses/Css/cssModules/flights.module.css";
+import  styles from   "../../resourses/Css/cssModules/cities.module.css";
 
 const Cities = () => {
    const cities = [

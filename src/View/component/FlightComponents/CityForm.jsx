@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../../resourses/Css/cssModules/flights.module.css";
 
-const FlightForm = () => {
+const CityForm = () => {
   return (
     <form className={styles.flightForm}>
       
@@ -13,4 +13,4 @@ const FlightForm = () => {
   );
 };
 
-export default FlightForm;
+export default CityForm;

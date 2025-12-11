@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "../../../resourses/Css/cssModules/flights.module.css";
 
-const FlightCard = ({ img, route, departure, price }) => {
+const CityCard = ({ img, name }) => {
   return (
     <div className={styles.guideCard}>
-      <img src={img} className={styles.cardImgTop} alt={route} />
+      <img src={img} className={styles.cardImgTop} alt={name} />
+
       <div className={styles.cardBody}>
-        <span className={styles.textBlack50}>{route}</span>
-        <p>Departure: {departure}</p>
-        <p>Price: {price}$</p>
+        <h3 className={styles.cityName}>{name}</h3>
+
         <button
           onClick={() => (window.location.href = '/TravelForm')}
           className={styles.bookBtn}
@@ -20,4 +20,4 @@ const FlightCard = ({ img, route, departure, price }) => {
   );
 };
 
-export default FlightCard;
+export default CityCard;

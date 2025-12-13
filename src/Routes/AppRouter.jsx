@@ -11,6 +11,8 @@ import Signup from '../View/page/Signup';
 import ResetPassword from '../View/page/ResetPassword';
 import TravelForm from "../View/component/CityComponents/TravelForm";
 import Cities from "../View/page/City";
+import HotelDetails from "../View/component/HotelComponents/HotelDetails";
+import BookNow from './../View/component/Booking/Book';
 
 const AppRouter  = () => {
   return (
@@ -19,6 +21,8 @@ const AppRouter  = () => {
       <Route path="/cities" element={<Cities />} />
       <Route path="/TravelForm" element={<TravelForm />} />
       <Route path="/hotels" element={<Hotels />} />
+      <Route path="/hotelsDetails" element={<HotelDetails />} />
+      <Route path="/booking" element={<BookNow />} />
       <Route path="/guides" element={<Guides />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/profile" element={<Profile />} />

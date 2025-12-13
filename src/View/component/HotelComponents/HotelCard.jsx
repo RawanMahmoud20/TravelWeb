@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../../resourses/Css/cssModules/hotels.module.css";
+import HotelDetails from './HotelDetails';
 
 const HotelCard = ({ img, name, location }) => {
   return (
@@ -7,7 +8,7 @@ const HotelCard = ({ img, name, location }) => {
       <img src={img} alt={name} />
       <h3>{name}</h3>
       <p>{location}</p>
-      <button onClick={() => window.location.href='/travelForm'}>
+      <button onClick={() => window.location.href='/hotelsDetails'}>
         Book Now
       </button>
     </div>

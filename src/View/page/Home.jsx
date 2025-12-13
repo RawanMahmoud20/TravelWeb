@@ -10,7 +10,7 @@ import NavBar from "../component/NavBar";
 import Header from "../component/HomeComponent/Header";
 import Footer from "../component/HomeComponent/Footer";
 import { NavLink } from "react-router-dom";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+// import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Home = () => {
   return (

@@ -13,6 +13,7 @@ import TravelForm from "../View/component/CityComponents/TravelForm";
 import Cities from "../View/page/City";
 import HotelDetails from "../View/component/HotelComponents/HotelDetails";
 import BookNow from './../View/component/Booking/Book';
+import Checkout from './../View/component/Booking/Checkout';
 
 const AppRouter  = () => {
   return (
@@ -23,6 +24,7 @@ const AppRouter  = () => {
       <Route path="/hotels" element={<Hotels />} />
       <Route path="/hotelsDetails" element={<HotelDetails />} />
       <Route path="/booking" element={<BookNow />} />
+      <Route path="/checkout" element={<Checkout />} />
       <Route path="/guides" element={<Guides />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/profile" element={<Profile />} />

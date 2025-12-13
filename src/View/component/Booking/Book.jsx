@@ -98,7 +98,8 @@ const BookNow = () => {
               <span className={styles.totalValue}>$330</span>
             </div>
 
-            <button type="submit" className={styles.submitBtn}>
+            <button type="submit" className={styles.submitBtn}
+            onClick={()=>window.location.href='/checkout'}>
               Submit Booking
             </button>
           </div>

@@ -14,6 +14,7 @@ import Cities from "../View/page/City";
 import HotelDetails from "../View/component/HotelComponents/HotelDetails";
 import BookNow from './../View/component/Booking/Book';
 import Checkout from './../View/component/Booking/Checkout';
+import AddHotel from "../View/page/AddHotel";
 
 const AppRouter  = () => {
   return (
@@ -31,11 +32,7 @@ const AppRouter  = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />     
       <Route path="/reset-password" element={<ResetPassword />} />
-      {/* />
-       />
-      
-
-*/}
+      <Route path="/add-hotel" element={<AddHotel />} />
     </Routes>
   );
 };

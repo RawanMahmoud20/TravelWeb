@@ -1,20 +1,35 @@
-import React from "react";
-import  styles from   "../../resourses/Css/cssModules/hotels.module.css";
-
-// Dummy data for hotels
-import BurjAlArab from "../../resourses/image/BurjAlArab.jpg";
-import MarinaBay from "../../resourses/image/MarinaBay.jpg";
-import AlazzoVersace from "../../resourses/image/AlazzoVersace.jpg";
-import NavBar from './../component/NavBar';
-import HotelForm from '../component/HotelComponents/HotelForm';
-import HotelCard from '../component/HotelComponents/HotelCard';
+import React, { useEffect, useState } from "react";
+import styles from "../../resourses/Css/cssModules/hotels.module.css";
+import NavBar from "../component/NavBar";
+import HotelForm from "../component/HotelComponents/HotelForm";
+import HotelCard from "../component/HotelComponents/HotelCard";
+import { GetAllHotels, SearchHotels } from "../../hooks/UseHotel";
 
 const Hotels = () => {
-  const hotels = [
-    { img: BurjAlArab, name: "Burj Al Arab", location: "DUBAI" },
-    { img: MarinaBay, name: "Marina Bay ", location: "SINGAPORE" },
-    { img: AlazzoVersace, name: "Palazzo Versace", location: "DUBAI" },
-  ];
+  const [hotels, setHotels] = useState([]);
+  const [searched, setSearched] = useState(false);
+
+  // GET ALL
+  useEffect(() => {
+    loadHotels();
+  }, []);
+
+  const loadHotels = async () => {
+    const res = await GetAllHotels();
+    setHotels(res.data);
+    setSearched(false);
+  };
+
+  // SEARCH
+  const handleSearch = async (keyword) => {
+    if (!keyword) {
+      loadHotels();
+      return;
+    }
+    const res = await SearchHotels(keyword);
+    setHotels(res.data);
+    setSearched(true);
+  };
 
   return (
     <div>
@@ -25,16 +40,22 @@ const Hotels = () => {
       </header>
       <section className={styles.hotelSearch}>
         <h2 className={styles.search}>Search Hotels</h2>
-        <HotelForm/>
+        <HotelForm onSearch={handleSearch} />
         <div className={styles.guideList}>
-          {hotels.map((hotel, index) => (
-            <HotelCard
-              key={index}
-              img={hotel.img}
-              name={hotel.name}
-              location={hotel.location}
-            />
-          ))}
+          {Array.isArray(hotels) && hotels.length > 0 ? (
+            hotels.map((hotel) => (
+              <HotelCard
+                key={hotel.hotelId}
+                img={`https://travelgo.runasp.net${hotel.imageGallery[0]}`}
+                name={hotel.name}
+                location={hotel.address}
+              />
+            ))
+          ) : searched ? (
+            <div className={styles.noResults}>
+              <p>No hotels found</p>
+            </div>
+          ) : null}
         </div>
       </section>
     </div>

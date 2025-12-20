@@ -1,19 +1,26 @@
+import axiosInstance from "./axios";
 
-import {
-  fetchCities,
-  searchCities,
-  createCity, } from "../Api/CityApi"
+// GET all cities
 
+export const fetchCities = async () => {
+    return await axiosInstance.get("/City");
+}
+// SEARCH cities
+export const searchCities = async (name) => {
+    return await axiosInstance.get(`/City/search?name=${name}`);
+}
 
-export const GetAllCities = async () => {
-  const res = await fetchCities();
-  return res.data;
-};
-export const SearchCities = async (keyword) => {
-  const res = await searchCities(keyword);
-  return res.data;
-};
-
-export const AddCity = async (formData) => {
-  await createCity(formData);
-};
+// GET city by ID
+export const fetchCityById = async (id) => {
+    return await axiosInstance.get(`/City/${id}`);
+}
+// POST create new city
+export const createCity = async (formData) => {
+ return axiosInstance.post(
+    "/City",
+    formData, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
+}

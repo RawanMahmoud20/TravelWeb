@@ -7,8 +7,8 @@ import ToIstanbul from "../../resourses/image/ToIstanbul.webp";
 import ToDubai from "../../resourses/image/ToDubai.jpg";
 
 import  styles from   "../../resourses/Css/cssModules/cities.module.css";
-import { GetAllCities } from "../../Services/CityServices";
-import { searchCities } from "../../Api/CityApi";
+import { GetAllCities } from "../../hooks/UseCity";
+import { searchCities } from "../../Services/CityServices";
 
 const Cities = () => {
 const [Cities, setCities] = useState([]);

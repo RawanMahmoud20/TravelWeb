@@ -107,7 +107,7 @@ const Header = () => {
           </div>
           <NavLink
             className={`rounded-pill main-btn text-uppercase ${TravelGoStyle.btn}`}
-            to="/flights"
+            to="/cities"
           >
             travel now
           </NavLink>

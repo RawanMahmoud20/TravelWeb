@@ -41,7 +41,7 @@ const Home = () => {
               </p>
               <NavLink
                 className={`${TravelGoStyle.btn}  rounded-pill main-btn`}
-                to="/flights"
+                to="/cities"
               >
                 Visit now
               </NavLink>

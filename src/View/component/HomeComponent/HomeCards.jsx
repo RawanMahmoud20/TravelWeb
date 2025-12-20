@@ -143,14 +143,14 @@ const HomeCards = () => {
       >
         <h2>Enjoy your trip now</h2>
         <p className="text-white-50">
-          Book your stay at the most beautiful hotels in the world
+          Book your stay at the most beautiful City in the world
         </p>
         <div className="d-flex justify-content-center mt-5 mb-5">
           <NavLink
             className={`${TravelGoStyle.btn}  rounded-pill main-btn text-uppercase" `}
-            to="/hotels"
+            to="/cities"
           >
-            Book now
+            Choose City
           </NavLink>
         </div>
       </div>

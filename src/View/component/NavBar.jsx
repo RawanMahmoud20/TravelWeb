@@ -6,6 +6,9 @@ const NavBar = () => {
   const location = useLocation();
   const isHome = location.pathname === "/"; // تحقق إذا كانت الصفحة الرئيسية
 
+  // تحقق من تسجيل الدخول عن طريق وجود token
+  const isLoggedIn = !!localStorage.getItem("token");
+
   return (
     <nav className={`navbar navbar-expand-lg sticky-top ${TravelGoStyle.travelNavbar}`}>
       <div className="container">
@@ -67,18 +70,19 @@ const NavBar = () => {
                 Contact
               </NavLink>
             </li>
+
             <li>
-              {isHome ? (
+              {isLoggedIn ? (
+                <NavLink id="profile-btn" to="/profile" className={`${TravelGoStyle.userIcon}`}>
+                  <i className="fa-solid fa-user"></i> {/* أيقونة البروفايل */}
+                </NavLink>
+              ) : (
                 <NavLink
                   id="login-btn"
                   className={`btn-primary rounded-pill main-btn ${TravelGoStyle.LogInbtn}`}
                   to="/login"
                 >
                   Login
-                </NavLink>
-              ) : (
-                <NavLink id="profile-btn" to="/profile" className={`${TravelGoStyle.userIcon}`}>                  
-                <i className={`fa-solid fa-user`}></i> {/* أيقونة البروفايل */}
                 </NavLink>
               )}
             </li>

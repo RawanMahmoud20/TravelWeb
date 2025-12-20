@@ -52,9 +52,9 @@ const NavBar = () => {
                 className={({ isActive }) =>
                   `nav-link p-2 p-lg-3 ${isActive ? TravelGoStyle.active : ""} ${TravelGoStyle.travelNavLink}`
                 }
-                to="/guides"
+                to="/FeedBack"
               >
-                Guides
+                FeedBack
               </NavLink>
             </li>
             <li className="nav-item">

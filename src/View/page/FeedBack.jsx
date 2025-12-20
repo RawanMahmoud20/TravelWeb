@@ -3,7 +3,7 @@ import NavBar from "../component/NavBar";
 import GuidesList from '../component/GuideComponents/GuidesList';
 import UploadImage from '../component/GuideComponents/UploadImage';
 import styles from "../../resourses/Css/cssModules/guides.module.css";
-const Guides = () => {
+const FeedBack = () => {
   return (
     <>
       <NavBar />
@@ -17,4 +17,4 @@ const Guides = () => {
   );
 };
 
-export default Guides;
+export default FeedBack;

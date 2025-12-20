@@ -203,8 +203,44 @@ body {
   cursor: pointer;
 }
 
-@media (max-width: 991px) {
+.searchSection {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  align-items: flex-start;
+}
+.searchBox {
+  width: 260px;
+}
+
+.search {
+  margin-bottom: 10px;
+  color: #19283f;
+}
+.flightList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+@media (max-width: 1207px) {
   .navbarLogo {
     display: none;
+  }
+}
+@media (max-width: 768px) {
+  .searchSection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .searchBox {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .flightList {
+    justify-content: center;
   }
 }

@@ -24,7 +24,27 @@ export default function Signup() {
       return;
     }
 
-    // طلب الكود أولاً قبل إرسال أي بيانات للسيرفر
+    try {
+      // إرسال البيانات لإنشاء الحساب (السيرفر يرسل كود التفعيل)
+      await axios.post(
+        "https://travelgo.runasp.net/api/Auth/Register",
+        {
+          fullName: name,
+          email: email,
+          password: password,
+          confirmPassword: confirmPassword
+        },
+        { headers: { "Content-Type": "application/json" } }
+      );
+    } catch (err) {
+      Swal.fire({
+        icon: "error",
+        title: "Registration Failed",
+        text: err.response?.data?.message || err.message
+      });
+      return;
+    }
+
     const { value: activationCode } = await Swal.fire({
       title: "Enter Activation Code",
       input: "text",
@@ -44,29 +64,26 @@ export default function Signup() {
     }
 
     try {
-      // إرسال البيانات مع Activation Code للتحقق وإنشاء الحساب
-      const response = await axios.post(
-        "https://travelgo.runasp.net/api/Auth/Register",
+      // إرسال كود التفعيل لتفعيل الحساب
+      await axios.post(
+        "https://travelgo.runasp.net/api/Auth/activecode",
         {
-          fullName: name,
           email: email,
-          password: password,
-          confirmPassword: confirmPassword,
-          activationcode: activationCode
+          activationCode: activationCode
         },
         { headers: { "Content-Type": "application/json" } }
       );
 
       Swal.fire({
         icon: "success",
-        title: "Account Created & Activated",
-        text: "Your account has been successfully created!"
-      }).then(() => navigate("/"));
+        title: "Account Activated",
+        text: "Your account has been successfully activated!"
+      }).then(() => navigate("/login"));
 
     } catch (err) {
       Swal.fire({
         icon: "error",
-        title: "Registration Failed",
+        title: "Activation Failed",
         text: err.response?.data?.message || err.message
       });
     }
@@ -120,7 +137,10 @@ export default function Signup() {
         </form>
 
         <p className={styles.footer}>
-          Already have an account? <Link to="/login" className={styles.link}>Login</Link>
+          Already have an account?{" "}
+          <Link to="/login" className={styles.link}>
+            Login
+          </Link>
         </p>
       </div>
     </div>

@@ -138,11 +138,11 @@ body {
 
 /* Flight list */
 .flightList {
-   display: flex;          /* جعل الكروت في صف */
-  flex-wrap: wrap;        /* السماح للكروت بالانتقال للسطر التالي إذا ضاق المكان */
-  gap: 20px;              /* المسافة بين الكروت */
-  justify-content: center; /* توسيط الكروت داخل الحاوية */
-  margin-top: 20px;   
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* توسيط الكروت دائماً */
+  margin-top: 20px;
   padding: 30px;
 }
 
@@ -244,3 +244,4 @@ body {
     justify-content: center;
   }
 }
+

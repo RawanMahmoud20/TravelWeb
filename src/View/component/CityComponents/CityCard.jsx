@@ -14,7 +14,7 @@ const CityCard = ({ img, name }) => {
           onClick={() => (window.location.href = '/hotels')}
           className={styles.bookBtn}
         >
-          Book Now
+          Show Hotels
         </button>
       </div>
     </div>

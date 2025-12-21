@@ -2,16 +2,13 @@ import React, { useEffect, useState } from "react";
 import NavBar from "../component/NavBar";
 import CityForm from "../component/CityComponents/CityForm";
 import CityCard from "../component/CityComponents/CityCard";
-import ToParis from "../../resourses/image/ToParis.webp";
-import ToIstanbul from "../../resourses/image/ToIstanbul.webp";
-import ToDubai from "../../resourses/image/ToDubai.jpg";
-
 import  styles from   "../../resourses/Css/cssModules/cities.module.css";
 import { GetAllCities } from "../../hooks/UseCity";
-import { searchCities } from "../../Services/CityServices";
+import { searchCities  } from "../../Services/CityServices";
+import Swal from "sweetalert2";
 
 const Cities = () => {
-const [Cities, setCities] = useState([]);
+const [cities, setCities] = useState([]);
 
 // GET ALL
   useEffect(() => {
@@ -19,24 +16,40 @@ const [Cities, setCities] = useState([]);
   }, []);
 
 const loadCities = async () => {
-  const res = await GetAllCities();
-  setCities(res.data); // نستخدم data فقط
+  try {
+    // لتجلب كل المدن من API
+      const res = await GetAllCities();
+      if (res.success) {
+        setCities(res.data); // data فقط
+      }
+    } catch (error) {
+      Swal.fire("Error", "Cannot fetch cities", "error");
+    }
 };
 
   // SEARCH
-  const handleSearch = async (keyword) => {
-    if (!keyword) {
-      loadCities();
-      return;
+  const handleSearch = async (keyword, resetInput) => {
+  const trimmed = keyword.trim();
+  if (!trimmed) {
+    Swal.fire("Error", "Please enter a city name", "error");
+    return;
+  }
+    try {
+    const res = await searchCities(trimmed);
+
+      if (res.data.success &&res.data.data.length > 0) {
+        Swal.fire("Success ✅", res.data.message, "success");
+        setCities(res.data.data);// data من البحث
+      } else {
+        Swal.fire("Not Found", "No city found", "warning");
+         setCities([]);  // فراغ إذا ما في نتائج
+      }
+      // هنا resetInput() هي الدالة الممررة من CityForm التي تفريغ حالة الـ input (setSearch("")).
+    if (resetInput) resetInput();
+    } catch (error) {
+      Swal.fire("Error", "Server error", "error");
     }
-    const res  = await searchCities(keyword);
-    setCities(res.data);
   };  
-//    const cities = [
-//     { img: ToParis, name: "Paris Tour" },
-//     { img: ToIstanbul, name: "Istanbul Tour" },
-//     { img: ToDubai, name: "Dubai Tour" },
-//   ];
 
     return (
         <div>
@@ -51,11 +64,11 @@ const loadCities = async () => {
             <section className={styles.searchSection}>
             <h2 className={styles.search}>Search Cities</h2>
 
-                <CityForm />
+          <CityForm onSearch={handleSearch} />
 
                 <div className={styles.flightList}>
-                  {Array.isArray(Cities) &&
-                    Cities.map((city) => (
+                  {Array.isArray(cities) &&
+                    cities.map((city) => (
                         <CityCard
                         key={city.cityId}
                         img={`https://travelgo.runasp.net${city.photo}`}

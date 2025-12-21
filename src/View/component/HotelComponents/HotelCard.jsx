@@ -9,7 +9,7 @@ const HotelCard = ({ img, name, location }) => {
       <h3>{name}</h3>
       <p>{location}</p>
       <button onClick={() => window.location.href='/hotelsDetails'}>
-        Book Now
+        Show details
       </button>
     </div>
   );

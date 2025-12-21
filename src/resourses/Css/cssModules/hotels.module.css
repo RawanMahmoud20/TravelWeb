@@ -113,6 +113,19 @@ body {
   background: #075082;
 }
 
+.noResults {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: #6c757d;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.noResults p {
+  margin: 0;
+}
+
 @media (max-width: 991px) {
   .navbar .logo {
     display: none;
